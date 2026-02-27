@@ -88,29 +88,6 @@ Here’s what the app looks like:
 ![Summary](assets/summary.png)
 ![Graph](assets/graph.png)
 
-## Project Structure
-
-```
-csv-agent/
-├── csv-agent-backend/
-│   ├── app.py
-│   ├── tools/
-│   │   ├── generate_summary.py
-│   │   └── visualize_csv.py
-│   ├── uploads/
-│   ├── .env
-│   └── requirements.txt
-│
-├── csv-agent-frontend/
-│   ├── src/
-│   │   ├── App.js
-│   │   ├── UploadForm.jsx
-│   │   └── App.css
-│   ├── public/
-│   └── package.json
-│
-└── README.md
-```
 ## LangGraph Flow
 
 The LangGraph graph in `app.py` defines the following workflow:
@@ -118,12 +95,6 @@ The LangGraph graph in `app.py` defines the following workflow:
 1.  **Summarize:** The `generate_csv_summary` tool is called to generate a textual summary of the uploaded CSV data.
 2.  **Visualize:** The `visualize_csv` tool is called to generate histograms of the numerical data.
 3.  The results from both steps are then returned to the frontend.
-
-## Notes
-
-* The backend saves uploaded CSV files and generated plots in the `uploads/` directory. Ensure that this directory has the necessary write permissions.
-* The application assumes that the uploaded CSV files contain numerical data that can be visualized with histograms.
-* Error handling is included to catch potential issues during file upload, data processing, and visualization.
 
 ## Author
 
