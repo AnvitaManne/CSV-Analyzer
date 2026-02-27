@@ -88,30 +88,29 @@ Here’s what the app looks like:
 ![Summary](assets/summary.png)
 ![Graph](assets/graph.png)
 
-
 ## Project Structure
 
-
-├── csv-agent-backend/  # Backend code
-│   ├── app.py           # Flask application
-│   ├── tools/           # LangChain tools
-│   │   ├── generate_summary.py # Generates CSV summary
-│   │   ├── visualize_csv.py   # Generates CSV visualizations
-│   ├── uploads/         # Directory for uploaded files and generated plots
-│   ├── .env             # Environment variables (API keys)
-│   └── requirements.txt # Python dependencies
-├── csv-agent-frontend/ # Frontend code
-│   ├── src/           # React source code
-│   │   ├── App.js       # Main application component
-│   │   ├── UploadForm.jsx # Handles file upload and display
-│   │   ├── App.css      # Global styles
-│   │   └── ...        # Other React components
-│   ├── public/        # Static assets
-│   ├── package.json   # npm dependencies
-│   └── ...
-└── README.md          # Project documentation (this file)
-
-
+```
+csv-agent/
+├── csv-agent-backend/
+│   ├── app.py
+│   ├── tools/
+│   │   ├── generate_summary.py
+│   │   └── visualize_csv.py
+│   ├── uploads/
+│   ├── .env
+│   └── requirements.txt
+│
+├── csv-agent-frontend/
+│   ├── src/
+│   │   ├── App.js
+│   │   ├── UploadForm.jsx
+│   │   └── App.css
+│   ├── public/
+│   └── package.json
+│
+└── README.md
+```
 ## LangGraph Flow
 
 The LangGraph graph in `app.py` defines the following workflow:
